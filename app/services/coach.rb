@@ -5,7 +5,7 @@ class Coach
 
   def coach_answer
     # TODO: return coach answer to your_message
-    return "" if @question == "I am going to work right now!"
+    return "Good" if @question == "I am going to work right now!"
 
     return "Silly question, get dressed and go to work!" if @question[-1] == "?"
 

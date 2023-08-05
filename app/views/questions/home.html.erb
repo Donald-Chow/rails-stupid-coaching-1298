@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-10">
-      <div id="chatroom" class="rounded">
+      <div id="chatroom" class="rounded" data-controller="chat">
         <div class="d-flex">
           <img id="logo" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png">
           <h3>Wagon Chat</h3>
@@ -9,35 +9,45 @@
         <div class="row">
           <div class="col-9">
             <p id="to" class="m-0 ps-1">Stupid Coach</p>
-            <div id="messages" class="shadow-sm">
+            <div id="messages" class="shadow-sm" data-chat-target="messages">
+              <%# messages goes here %>
             </div>
           </div>
           <div class="col-3">
-            <img src="https://cdn.midjourney.com/6948fc9a-4132-4739-b51d-68f71e1805ff/0_1_384_N.webp" class="profilePic rounded shadow" alt="" />
+            <img src="https://cdn.midjourney.com/7b9b604b-1393-4975-917e-5e5c2506e63a/0_2_384_N.webp" class="profilePic rounded shadow" alt="" />
           </div>
         </div>
-
+        <p id="wait" class="m-0 p-1" data-chat-target="waiting"></p>
         <div class="row mt-3">
           <div class="col-9">
-            <form action="#" id="comment-form" class='h-100 shadow-sm'>
+            <form action="#" id="comment-form" class='h-100 shadow-sm' data-action="keyup->chat#reply">
               <textarea
               type="text"
               name="content"
               id="your-message"
               class="form-control h-100"
               placeholder="Type your message"
-            >
-            </textarea>
+              data-chat-target="input"
+            ></textarea>
             </form>
           </div>
 
           <div class="col-3">
             <img class="profilePic rounded shadow"
-              src="https://cdn.midjourney.com/ed6a1404-31d8-4575-a0da-d66e99127d63/0_0.png" alt="" />
+              src="https://cdn.midjourney.com/6948fc9a-4132-4739-b51d-68f71e1805ff/0_1_384_N.webp" alt="" />
           </div>
 
         </div>
       </div>
+
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Tell the coach "I am going to work right now!"
+        </div>
+      </div>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        Hint
+      </button>
     </div>
   </div>
 </div>

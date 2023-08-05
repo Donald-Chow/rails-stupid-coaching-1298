@@ -43,6 +43,9 @@ body{
   background: #e0e6ec;
 }
 
+#wait {
+  height: 16px;
+}
 .date{
   color: #b3b3b3;
 }
