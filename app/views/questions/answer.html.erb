@@ -1,11 +1,22 @@
-<h1>Stupid Coaching</h1>
-<div class="blockquote" id="question">
-  <p class="mb-0"><%= @question%></p>
-  <footer class="blockquote-footer">- You </footer>
+<div class="container mt-3">
+  <h1>Stupid Coaching</h1>
+  <figure class="ms-2 p-3">
+    <blockquote class="blockquote">
+      <p><%= @question %> </p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      You
+    </figcaption>
+  </figure>
+  <figure class="ms-2 p-3" id="answer">
+    <blockquote class="blockquote">
+      <p><strong><%= @answer %></strong></p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      You
+    </figcaption>
+  </figure>
+
+  <%= link_to 'Ask a new question', 'ask' %>
+
 </div>
-<div class="blockquote" id="answer>
-  <p class="mb-0"><strong><%= @answer%></strong></p>
-  <footer class="blockquote-footer">- Your coach </footer>
-</div>
-<p><%= @answer %></p>
-<%= link_to 'Ask a new question', 'ask' %>
