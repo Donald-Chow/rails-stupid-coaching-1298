@@ -13,10 +13,64 @@
  *= require_tree .
  *= require_self
  */
+/* * {
+  border: 1px solid red;
+} */
+/* base exercise css */
 #answer {
   background-color: rgb(253, 253, 218);
 }
 
 figure {
   border-left: 3px solid rgb(151, 151, 151);
+}
+
+/* home page css */
+body{
+  background: #F0F1F5;
+  padding-top: 50px;
+}
+
+#logo {
+  aspect-ratio: 1/1;
+  height: 30px;
+  margin-right: 12px;
+}
+
+#chatroom{
+  padding: 30px;
+  border: 1px solid lightgrey;
+  background: #e0e6ec;
+}
+
+.date{
+  color: #b3b3b3;
+}
+
+#to{
+  border: 1px solid rgb(177, 177, 245);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#to input {
+  border: 0;
+}
+
+#messages{
+  border: 1px solid rgb(177, 177, 245);
+  height: 300px;
+  overflow-y: scroll;
+  background: #f8fcff;
+}
+
+.message {
+  color: rgb(21, 21, 128);
+}
+
+.profilePic {
+  width: 100%;
+  aspect-ratio: 1/1 ;
+  object-fit: cover;
+  object-position: 0% 20%;
 }
